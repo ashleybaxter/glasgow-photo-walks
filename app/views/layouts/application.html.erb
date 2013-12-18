@@ -8,6 +8,19 @@
 </head>
 <body>
 
+<% if photographer_signed_in? %>
+  Logged in as <strong><%= current_photographer.email %></strong>.
+    <%= link_to 'Edit profile', edit_photographer_registration_path %> |
+    <%= link_to "Logout", destroy_photographer_session_path, method: :delete %>
+  <% else %>
+    <%= link_to "Sign up", new_photographer_registration_path %> |
+    <%= link_to "Login", new_photographer_session_path %>
+<% end %>
+
+<% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, id: "flash_#{name}" %>
+<% end %>
+
 <%= yield %>
 
 </body>
