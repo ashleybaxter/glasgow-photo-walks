@@ -8,6 +8,10 @@
 </head>
 <body>
 
+<div class="container">
+	<div class="grid">
+
+<div class="unit span-grid">
 <% if photographer_signed_in? %>
   Logged in as <strong><%= current_photographer.email %></strong>.
     <%= link_to 'Edit profile', edit_photographer_registration_path %> |
@@ -16,12 +20,30 @@
     <%= link_to "Sign up", new_photographer_registration_path %> |
     <%= link_to "Login", new_photographer_session_path %>
 <% end %>
+</div>
 
+<header>
+<div class="unit two-of-three">
+	<%= image_tag("logo.png") %>
+</div>
+
+<div class="unit one-of-three">
+	<p>Next event</p>
+	<p>00-00-0000</p>
+</div>
+</header>
+
+<div class="unit span-grid">
 <% flash.each do |name, msg| %>
   <%= content_tag :div, msg, id: "flash_#{name}" %>
 <% end %>
+</div>
+
 
 <%= yield %>
 
+
+  </div>
+ </div>
 </body>
 </html>
