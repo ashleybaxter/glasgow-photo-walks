@@ -63,3 +63,33 @@ table {
 img {
 	max-width: 100%;
 }
+
+/* Ashley's Rockin' CSS */
+
+@font-face {
+  font-family: Franchise;
+  src: url("/assets/fonts/Franchise.ttf");
+}
+
+@font-face {
+  font-family: Inconsolata;
+  src: url("/assets/fonts/Inconsolata.otf");
+}
+
+h1, h2, h3, h4 {
+	font-family: Franchise;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	margin-bottom: 0.3em;
+}
+
+h2 {
+	margin-bottom: 0 !important;
+}
+
+.account-links { padding: 15px 0 35px 0; }
+
+header { padding: 35px 0; }
+
+/* Sidebar */
+

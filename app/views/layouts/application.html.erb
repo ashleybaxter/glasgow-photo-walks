@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>GlasgowPhotoWalks</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "application", "http://fonts.googleapis.com/css?family=Inconsolata:400,700", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -11,7 +11,7 @@
 <div class="container">
 	<div class="grid">
 
-<div class="unit span-grid">
+<div class="unit span-grid account-links">
 <% if photographer_signed_in? %>
   Logged in as <strong><%= current_photographer.email %></strong>.
     <%= link_to 'Edit profile', edit_photographer_registration_path %> |
@@ -23,13 +23,10 @@
 </div>
 
 <header>
-<div class="unit two-of-three">
-	<%= image_tag("logo.png") %>
-</div>
+<%= image_tag("logo.png", class: "unit one-of-three") %>
 
-<div class="unit one-of-three">
-	<p>Next event</p>
-	<p>00-00-0000</p>
+<div class="unit two-of-three">
+
 </div>
 </header>
 
