@@ -23,7 +23,7 @@
 </div>
 
 <header>
-<%= image_tag("logo.png", class: "unit one-of-three") %>
+<%= link_to image_tag("logo.png", class: "unit one-of-three"), "/" %>
 
 <div class="unit two-of-three">
 
@@ -38,6 +38,10 @@
 
 
 <%= yield %>
+
+<footer class="unit span-grid">
+	<p>Made in Glasgow &#09; Built by Ashley Baxter &#09; Made in Toad's Caravan</p>
+</footer>
 
 
   </div>

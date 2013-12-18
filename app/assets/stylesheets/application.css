@@ -93,3 +93,18 @@ header { padding: 35px 0; }
 
 /* Sidebar */
 
+.sidebar p, .sidebar ul {
+	margin-bottom: 45px;
+}
+
+.avatar {
+	webkit-border-radius: 125px;
+	border-radius: 125px;
+	-moz-border-radius: 125px;
+	position: absolute;
+	z-index: 1;
+}
+
+.profile {
+	margin-left:  140px;
+}
