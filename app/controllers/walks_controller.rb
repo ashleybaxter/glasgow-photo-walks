@@ -16,9 +16,22 @@ class WalksController < ApplicationController
 		@walk = Walk.find(params[:id])
 	end
 
+	def edit
+    @walk = Walk.find(params[:id])
+  end
+  
+  def update
+    @walk = Walk.find(params[:id])
+    if @walk.update_attributes(app_params)
+      redirect_to root_url
+    else
+      render('edit')
+    end
+  end
+
 	private
 
 	def app_params
-    params.require(:walk).permit(:start_date, :start_time, :end_time, :price)
+    params.require(:walk).permit(:latitude, :longitude, :address, :start_date, :start_time, :end_time, :price)
   end
 end

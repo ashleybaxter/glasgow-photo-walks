@@ -65,6 +65,8 @@ img {
 }
 
 /* Ashley's Rockin' CSS */
+#map label { width: auto; display:inline; }
+#map img { max-width: none; }
 
 @font-face {
   font-family: Franchise;
