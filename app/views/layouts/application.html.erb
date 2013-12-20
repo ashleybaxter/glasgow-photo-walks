@@ -7,28 +7,33 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="outer-account-links">
+	<div class="container">
+		<div class="grid">
+	<div class="unit span-grid account-links">
+	<% if photographer_signed_in? %>
+	  Logged in as <strong><%= current_photographer.email %></strong>.
+	    <%= link_to 'Edit profile', edit_photographer_registration_path %> &#124;
+	    <%= link_to "Sign out", destroy_photographer_session_path, method: :delete %>
+	  <% else %>
+	    <%= link_to "Sign up", new_photographer_registration_path %> &#124;
+	    <%= link_to "Sign in", new_photographer_session_path %>
+	<% end %>
+	</div>
+	</div>
+	</div>
+</div>
+
+<div class="header-outer">
+<header class="container">
+	<div class="grid">
+  <%= link_to image_tag("logo.png", class: "unit one-of-three"), "/" %>
+</div>
+</header>
+</div>
 
 <div class="container">
 	<div class="grid">
-
-<div class="unit span-grid account-links">
-<% if photographer_signed_in? %>
-  Logged in as <strong><%= current_photographer.email %></strong>.
-    <%= link_to 'Edit profile', edit_photographer_registration_path %> |
-    <%= link_to "Logout", destroy_photographer_session_path, method: :delete %>
-  <% else %>
-    <%= link_to "Sign up", new_photographer_registration_path %> |
-    <%= link_to "Login", new_photographer_session_path %>
-<% end %>
-</div>
-
-<header>
-<%= link_to image_tag("logo.png", class: "unit one-of-three"), "/" %>
-
-<div class="unit two-of-three">
-
-</div>
-</header>
 
 <div class="unit span-grid">
 <% flash.each do |name, msg| %>
@@ -40,7 +45,7 @@
 <%= yield %>
 
 <footer class="unit span-grid">
-	<p>Made in Glasgow &#124; Built by Ashley Baxter &#124; Based in Toad's Caravan</p>
+	<p>Made in Glasgow &#124; Built by <a href="http://twitter.com/iamashley">Ashley Baxter</a> &#124; Based in <a href="http://toadscaravan.com">Toad's Caravan</a></p>
 </footer>
 
 

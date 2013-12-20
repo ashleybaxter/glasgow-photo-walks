@@ -66,6 +66,19 @@ img {
 
 /* Ashley's Rockin' CSS */
 
+img.unit.one-of-three {
+	padding: 75px 25px;
+	background: rgb(255, 255, 255); /* Fall-back for browsers that don't
+	                                    support rgba */
+	    background: rgba(255, 255, 255, .7);
+}
+
+img.unit.one-of-three:hover {
+	background: rgb(255, 255, 255); /* Fall-back for browsers that don't
+	                                    support rgba */
+	    background: rgba(255, 255, 255, .8);
+}
+
 a:link, a:visited {
 	color: #ec632f;
 }
@@ -73,6 +86,8 @@ a:link, a:visited {
 a:hover {
 	color: #164f6a;
 }
+
+.date { font-variant: small-caps; font-size: 22px; text-transform: uppercase; }
 
 #map label { width: auto; display:inline; }
 #map img { max-width: none; }
@@ -87,31 +102,48 @@ a:hover {
   src: url("/assets/fonts/Inconsolata.otf");
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, .book {
 	font-family: Franchise;
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
 	margin-bottom: 0.3em;
 }
 
+.header-outer {
+	margin-bottom: 15px;
+}
+
 h2 {
 	margin-bottom: 0 !important;
 }
+.outer-account-links { background: #2f2f2f;}
+.account-links { padding: 10px 0 15px 0; text-align: right; color: #ffffff; }
+.account-links a:link, .account-links a:visited { color: #ffffff; }
+.account-links a:hover { color: #ec632f; }
 
-.account-links { padding: 15px 0 35px 0; }
-
-header { padding: 35px 0; }
+header { padding: 35px 0; min-height: 500px;}
+.header-outer { background: url(glasgow.jpg)no-repeat center center fixed; 
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+ padding-top: 15px; }
 
 .book {
-	padding: 15px;
+	padding: 15px 15px 10px 15px;
 	background-color: #ec632f;
-	width: 25%;
-	text-align: center;
-	margin-top: 10px;
+	margin: 15px 0 35px 0;
+	font-size: 40px;
+	width: 190px;
 }
 
 .book a:link, .book a:visited {
 	color: white;
+	text-decoration: none;
+}
+
+.book:hover {
+	background-color: #164f6a;
 }
 
 /* Sidebar */
@@ -130,4 +162,8 @@ header { padding: 35px 0; }
 
 .profile {
 	margin-left:  140px;
+}
+
+footer {
+	margin-top: 35px;
 }

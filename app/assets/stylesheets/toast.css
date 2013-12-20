@@ -143,6 +143,7 @@ html {
 	font: 125%/1.5;
 	font-family: Inconsolata;
 	letter-spacing: -0.05em;
+	color: #2F2F2F;
 }
 
 @media screen and (max-width: 650px) {

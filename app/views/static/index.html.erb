@@ -4,7 +4,7 @@
  <div class="unit two-of-three">
 
 <h2>Next Photo Walk</h2>
-<p class="date"><%= Walk.last.start_date.strftime('%m-%d-%Y') %></p>
+<p class="date">Date: <%= Walk.last.start_date.strftime('%m-%d-%Y') %></p>
 <div style='width: 780px;'>
   <div id="map" style='width: 780px; height: 400px;'></div>
 </div>
@@ -20,7 +20,7 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
 <p class="book"><a href="#">Book a spot</a></p>
 
 <h2>Recent Uploads</h2>
-<p>Glasgow Photo Walk values its community, and encourages participants of the photo walks to upload and share their photos. You can even suggest critique and receive friendly feedback. The goal of Glasgow Photo Walks, after all, is to become a better photographer in a fun environment.</p>
+<p>Glasgow Photo Walk values its community and encourages participants of the photo walks to upload and share their photos. <%= link_to 'Sign up', new_photographer_registration_path %> and begin sharing.</p>
 
 </div>
 
@@ -33,13 +33,12 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
 <ul>
 	<li>Time: 	<%= Walk.last.start_time.strftime("%k:%M %p") %></li>
 	<li>Length: 1.5 hours</li>
-	<li>Guide: 	Ashley Baxter</li>
+	<li>Guide: 	<a href="http://twitter.com/iamashley">Ashley Baxter</a></li>
 	<li>Price: 	<%= number_to_currency(Walk.last.price, :unit => "£") %></li>
 </ul>
 
 <h3>Tour Guide Bio</h3>
 <%= image_tag("ashley.jpg", class: "avatar",  size: "115x115") %>
-<p class="profile">Ashley Baxter, otherwise known as Girl With A Camera, loves both photography and Glasgow, thinking the city is a versatile and interesting setting to shoot. Ashley has photographed campaigns for clients ranging from Glasgow City Marketing Bureau, Young Scot and Citizens Theatre, as well as doing wedding photography in the summer months.</p>
+<p class="profile">Ashley Baxter, otherwise known as <a href="http://girlwithacamera.co.uk">Girl With A Camera</a>, loves both photography and Glasgow, thinking the city is a versatile and interesting setting to shoot. Ashley has photographed campaigns for clients ranging from Glasgow City Marketing Bureau, Young Scot and Citizens Theatre, as well as doing wedding photography in the summer months.</p>
 
 </div>
-
