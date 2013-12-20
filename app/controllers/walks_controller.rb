@@ -6,14 +6,10 @@ class WalksController < ApplicationController
 	def create
 		@walk = Walk.new(app_params)
 	  if @walk.save
-      redirect_to @walk
+      redirect_to root_url
     else
       render('new')
     end
-	end
-
-	def show
-		@walk = Walk.find(params[:id])
 	end
 
 	def edit
