@@ -1,7 +1,7 @@
 <div class="unit two-of-three">
 
 <h2>Next Photo Walk</h2>
-<p class="date">18-01-2014</p>
+<p class="date"><%= Walk.last.start_date.strftime('%m-%d-%Y') %></p>
 <p>[insert Google maps]<p>
 <p>Book a spot</p>
 
@@ -17,10 +17,10 @@
 
 <h3>Deets</h3>
 <ul>
-	<li>Time: 	12.30pm</li>
+	<li>Time: 	<%= Walk.last.start_time.strftime("%k:%M %p") %></li>
 	<li>Length: 1.5 hours</li>
 	<li>Guide: 	Ashley Baxter</li>
-	<li>Price: 	Mini Eggs</li>
+	<li>Price: 	<%= number_to_currency(Walk.last.price, :unit => "£") %></li>
 </ul>
 
 <h3>Tour Guide Bio</h3>
