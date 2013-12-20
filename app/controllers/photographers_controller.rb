@@ -4,6 +4,6 @@ class PhotographersController < ApplicationController
 
 	def app_params
     params.require(:photographer).permit(:first_name, :last_name)
-   end
+  end
    
 end

@@ -1,0 +1,26 @@
+<div class="unit span-grid">
+<%= form_for @walk do |f| %>
+
+<fieldset>
+<%= f.label :start_date %>
+<%= f.date_select :start_date %>
+</fieldset>
+
+<fieldset>
+<%= f.label :start_time %>
+<%= f.time_select :start_time %>
+</fieldset>
+
+<fieldset>
+<%= f.label :end_time %>
+<%= f.time_select :end_time %>
+</fieldset>
+
+<fieldset>
+<%= f.label :price %>
+<%= f.text_field :price %>
+</fieldset>
+
+<%= f.submit %>
+<% end %>
+</div>
