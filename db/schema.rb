@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131218142258) do
+ActiveRecord::Schema.define(version: 20131220122405) do
 
   create_table "photographers", force: true do |t|
     t.string   "first_name"
@@ -32,5 +32,14 @@ ActiveRecord::Schema.define(version: 20131218142258) do
 
   add_index "photographers", ["email"], name: "index_photographers_on_email", unique: true
   add_index "photographers", ["reset_password_token"], name: "index_photographers_on_reset_password_token", unique: true
+
+  create_table "walks", force: true do |t|
+    t.date     "start_date"
+    t.time     "start_time"
+    t.time     "end_time"
+    t.decimal  "price"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
