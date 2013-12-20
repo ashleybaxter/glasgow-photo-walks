@@ -65,6 +65,15 @@ img {
 }
 
 /* Ashley's Rockin' CSS */
+
+a:link, a:visited {
+	color: #ec632f;
+}
+
+a:hover {
+	color: #164f6a;
+}
+
 #map label { width: auto; display:inline; }
 #map img { max-width: none; }
 
@@ -92,6 +101,18 @@ h2 {
 .account-links { padding: 15px 0 35px 0; }
 
 header { padding: 35px 0; }
+
+.book {
+	padding: 15px;
+	background-color: #ec632f;
+	width: 25%;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.book a:link, .book a:visited {
+	color: white;
+}
 
 /* Sidebar */
 
