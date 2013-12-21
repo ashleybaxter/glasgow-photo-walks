@@ -1,6 +1,8 @@
 class PhotosController < ApplicationController
+  
   def new
     @photo = Photo.new(:photographer_id => params[:photographer_id])
+    authorize! :create, @photo
   end
   
   def create

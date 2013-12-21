@@ -9,5 +9,14 @@ class ApplicationController < ActionController::Base
       u.permit(:first_name, :last_name, :email, :password, :password_confirmation)
     end
   end
+  
+  def current_ability
+    @current_ability ||= Ability.new(current_photographer)
+  end
+  
+  rescue_from CanCan::AccessDenied do |exception|
+    flash[:error] = "Sorry, but you do not have permission to view that page. It's top secret!"
+    redirect_to root_url
+  end
 
 end
