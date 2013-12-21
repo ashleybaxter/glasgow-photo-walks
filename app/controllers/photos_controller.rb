@@ -1,6 +1,6 @@
 class PhotosController < ApplicationController
   def new
-    @photo = Photo.new
+    @photo = Photo.new(:photographer_id => params[:photographer_id])
   end
   
   def create
@@ -15,6 +15,6 @@ class PhotosController < ApplicationController
   private
 
 	def app_params
-    params.require(:photo).permit(:image)
+    params.require(:photo).permit(:image, :photographer_id)
   end
 end

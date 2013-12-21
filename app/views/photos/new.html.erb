@@ -1,5 +1,6 @@
 <div class="unit span-grid">
-<%= form_for @photo do |f| %>
+<%= form_for @photo, :html => {:multipart => true} do |f| %>
+<%= f.hidden_field :photographer_id, :value => current_photographer.id %>
 <fieldset>
   <%= f.file_field :image %>
 </fieldset>

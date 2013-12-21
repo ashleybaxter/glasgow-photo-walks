@@ -12,7 +12,7 @@
 		<div class="grid">
 	<div class="unit span-grid account-links">
 	<% if photographer_signed_in? %>
-	  Logged in as <strong><%= current_photographer.email %></strong>.
+	  Logged in as <strong><%= current_photographer.first_name %></strong> &#124;
 	    <%= link_to 'Edit profile', edit_photographer_registration_path %> &#124;
 	    <%= link_to "Sign out", destroy_photographer_session_path, method: :delete %>
 	  <% else %>
