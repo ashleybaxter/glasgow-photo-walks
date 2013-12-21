@@ -20,8 +20,10 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
 <p class="book"><a href="#">Book a spot</a></p>
 
 <h2>Recent Uploads</h2>
-<p>Glasgow Photo Walk values its community and encourages participants of the photo walks to upload and share their photos. <%= link_to 'Sign up', new_photographer_registration_path %> and begin sharing.</p>
-
+<p>Glasgow Photo Walk values its community and encourages participants of the photo walks to upload and share their photos. <%= link_to 'Sign up', new_photographer_registration_path %> and <%= link_to 'begin sharing', new_photo_path %>.</p>
+<% @photo.sort_by{|t| - t.created_at.to_i}.first(10).each do |p| %>
+	<%= image_tag p.image_url(:thumb).to_s if @photo.present? %>
+<% end %>
 </div>
 
 <div class="unit one-of-three sidebar">

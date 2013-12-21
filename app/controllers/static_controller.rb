@@ -4,6 +4,7 @@ class StaticController < ApplicationController
 		@hash = Gmaps4rails.build_markers(@walk) do |walk, marker|
   	marker.lat walk.latitude
   	marker.lng walk.longitude
+  	@photo = Photo.all
   end
 	end
 end
