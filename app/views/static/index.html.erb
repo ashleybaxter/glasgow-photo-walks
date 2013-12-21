@@ -26,6 +26,9 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
 	<%= image_tag p.image_url(:thumb).to_s %>
   <% end %>
 <% end %>
+
+<p><%= link_to 'Upload your photo', new_photo_path %>.</p>
+
 </div>
 
 <div class="unit one-of-three sidebar">
