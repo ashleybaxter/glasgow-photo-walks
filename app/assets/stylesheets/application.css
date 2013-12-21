@@ -81,6 +81,7 @@ img.unit.one-of-three:hover {
 
 a:link, a:visited {
 	color: #ec632f;
+	text-decoration: none;
 }
 
 a:hover {
@@ -135,15 +136,17 @@ header { padding: 35px 0; min-height: 500px;}
 	margin: 15px 0 35px 0;
 	font-size: 40px;
 	width: 190px;
+	
 }
 
 .book a:link, .book a:visited {
 	color: white;
-	text-decoration: none;
+	display: block;
 }
 
 .book:hover {
 	background-color: #164f6a;
+	display: block;
 }
 
 /* Sidebar */

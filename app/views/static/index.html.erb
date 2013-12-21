@@ -31,10 +31,12 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
 
 <h3>Deets</h3>
 <ul>
-	<li>Time: 	<%= Walk.last.start_time.strftime("%k:%M %p") %></li>
-	<li>Length: 1.5 hours</li>
-	<li>Guide: 	<a href="http://twitter.com/iamashley">Ashley Baxter</a></li>
-	<li>Price: 	<%= number_to_currency(Walk.last.price, :unit => "£") %></li>
+	<li>Date:		<%= Walk.last.start_date.strftime('%m-%d-%Y') %></li>
+	<li>Location: 	<%= Walk.last.address %></li>
+	<li>Time: 		<%= Walk.last.start_time.strftime("%k:%M %p") %></li>
+	<li>Length: 	<%= Walk.last.duration %> hour(s)</li>
+	<li>Guide: 		<a href="http://twitter.com/iamashley">Ashley Baxter</a></li>
+	<li>Price: 		<%= number_to_currency(Walk.last.price, :unit => "£") %></li>
 </ul>
 
 <h3>Tour Guide Bio</h3>
