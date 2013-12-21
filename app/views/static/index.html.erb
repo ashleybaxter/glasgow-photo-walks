@@ -4,7 +4,7 @@
  <div class="unit two-of-three">
 
 <h2>Next Photo Walk</h2>
-<p class="date">Date: <%= Walk.last.start_date.strftime('%m-%d-%Y') %></p>
+<p class="date">Date: <%= Walk.last.start_date.strftime('%m-%d-%Y') if Walk.last.present? %></p>
 <div style='width: 780px;'>
   <div id="map" style='width: 780px; height: 400px;'></div>
 </div>
@@ -21,8 +21,10 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
 
 <h2>Recent Uploads</h2>
 <p>Glasgow Photo Walk values its community and encourages participants of the photo walks to upload and share their photos. <%= link_to 'Sign up', new_photographer_registration_path %> and <%= link_to 'begin sharing', new_photo_path %>.</p>
-<% @photo.sort_by{|t| - t.created_at.to_i}.first(10).each do |p| %>
-	<%= image_tag p.image_url(:thumb).to_s if @photo.present? %>
+<% if @photo.present? %>
+  <% @photo.sort_by{|t| - t.created_at.to_i}.first(10).each do |p| %>
+	<%= image_tag p.image_url(:thumb).to_s %>
+  <% end %>
 <% end %>
 </div>
 
@@ -31,15 +33,17 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
 <h3>What is this?</h3>
 <p>Glasgow Photo Walk is a structured yet informal walk around the city of Glasgow, requiring just two essentials - a camera and tolerance of rain! The photo walk isn’t restricted to dSLRs, and any level of photographer using any tool – even an iPhone – is encouraged to join us. What will you photograph? Whatever you want! Landscapes, street photography, or even photos of people taking photos. Anything goes.</p>
 
-<h3>Deets</h3>
-<ul>
+<% if Walk.last.present? %>
+  <h3>Deets</h3>
+  <ul>
 	<li>Date:		<%= Walk.last.start_date.strftime('%m-%d-%Y') %></li>
 	<li>Location: 	<%= Walk.last.address %></li>
 	<li>Time: 		<%= Walk.last.start_time.strftime("%k:%M %p") %></li>
 	<li>Length: 	<%= Walk.last.duration %> hour(s)</li>
 	<li>Guide: 		<a href="http://twitter.com/iamashley">Ashley Baxter</a></li>
 	<li>Price: 		<%= number_to_currency(Walk.last.price, :unit => "£") %></li>
-</ul>
+  </ul>
+<% end %>
 
 <h3>Tour Guide Bio</h3>
 <%= image_tag("ashley.jpg", class: "avatar",  size: "115x115") %>
