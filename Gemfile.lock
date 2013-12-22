@@ -16,12 +16,6 @@ GIT
       ransack (~> 1.0)
       sass-rails
 
-GIT
-  remote: git://github.com/ollym/cancan.git
-  revision: b4285ae43c7c048a26e2c5918bdfc2570d848b67
-  specs:
-    cancan (1.6.8)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -175,7 +169,6 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin!
-  cancan!
   carrierwave
   coffee-rails (~> 4.0.0)
   devise

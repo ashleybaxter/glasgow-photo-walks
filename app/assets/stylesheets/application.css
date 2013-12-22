@@ -90,12 +90,12 @@ a:hover {
 
 .button { 
 	background-color: #164f6a; 
-	padding: 15px; 
+	padding: 10px; 
 	font-family: Franchise; 
 	color: #ffffff; 
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
-	width: 20.5%;
+	width: 150px;
 	margin-top: 0.3em;
 	font-size: 20px;
 }
@@ -164,12 +164,11 @@ header { padding: 35px 0; min-height: 500px;}
 	display: block;
 }
 
-#flash_error, #flash_notice #flash_alert {
+#flash_error, #flash_notice, #flash_alert {
 	font-size: 20px;
 	padding: 10px 0;
 	color: #ec632f;
 }
-
 /* Sidebar */
 
 .sidebar p, .sidebar ul {
