@@ -1,5 +1,9 @@
 class PhotosController < ApplicationController
   before_filter :require_permission, only: :new
+  
+  def index
+    @photo = Photo.all
+  end
 
   def new
     @photo = Photo.new(:photographer_id => params[:photographer_id])

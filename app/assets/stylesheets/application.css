@@ -169,10 +169,32 @@ header { padding: 35px 0; min-height: 500px;}
 	padding: 10px 0;
 	color: #ec632f;
 }
+
+.photographer-name {
+	padding: 3px;
+	bottom: 5px;
+	background: rgb(255, 255, 255);
+	background: rgba(255, 255, 255, .7);
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
 /* Sidebar */
 
 .sidebar p, .sidebar ul {
 	margin-bottom: 45px;
+}
+
+.photo-grid li {
+	display: inline;
+}
+
+img {
+	position:relative;
+}
+
+.photo-grid a:link, .photo-grid a:visited {
+	width: 150px;
 }
 
 .avatar {

@@ -1,0 +1,11 @@
+<div class="unit span-grid photo-grid">
+	<ul>
+<% if @photo.present? %>
+  <% @photo.each do |p| %>
+  <%=  link_to p.image_url do %>
+    <li><%= image_tag(p.image_url(:thumb).to_s) %><span class="photographer-name"><%=p.photographer.first_name %> <%=p.photographer.last_name %></span></li>
+  <% end %>
+  <% end %>
+<% end %>
+</ul>
+</div>
