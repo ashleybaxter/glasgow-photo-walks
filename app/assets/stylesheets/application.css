@@ -179,10 +179,37 @@ header { padding: 35px 0; min-height: 500px;}
 	left: 0;
 	bottom: 0;
 }
+
+fieldset { border: none; padding: 10px; text-align: left; }
+fieldset input {
+        border: 1px solid #dddddd;
+        -webkit-border-radius: 2px;
+           -moz-border-radius: 2px;
+                        border-radius: 2px;
+}
+label { text-align: right; display: inline-block; width: 13%; margin-right: 3%; }
+input { background-color: #f7f7f8; padding: 5px; }
 /* Sidebar */
 
 .sidebar p, .sidebar ul {
 	margin-bottom: 45px;
+}
+
+.form-button {
+	background-color: #164f6a; 
+	padding: 10px !important; 
+	font-family: Franchise; 
+	color: #ffffff; 
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	width: 150px;
+	margin-top: 0.3em;
+	font-size: 20px;
+	margin-top: 1.5rem !important;
+}
+
+.form-button:hover {
+	background-color: #ec632f;
 }
 
 .photo-grid li {
