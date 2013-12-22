@@ -23,11 +23,13 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
 <p>Glasgow Photo Walk values its community and encourages participants of the photo walks to upload and share their photos. <%= link_to 'Sign up', new_photographer_registration_path %> and <%= link_to 'begin sharing', new_photo_path %>.</p>
 <% if @photo.present? %>
   <% @photo.sort_by{|t| - t.created_at.to_i}.first(10).each do |p| %>
-	<%= image_tag p.image_url(:thumb).to_s %>
+  <%=  link_to p.image_url do %>
+    <%= image_tag(p.image_url(:thumb).to_s) %>
+  <% end %>
   <% end %>
 <% end %>
 
-<p><%= link_to 'Upload your photo', new_photo_path %>.</p>
+<p class="button"><%= link_to 'Upload your photo', new_photo_path %></p>
 
 </div>
 

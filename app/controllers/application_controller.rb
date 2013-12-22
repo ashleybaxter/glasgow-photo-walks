@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   end
   
   rescue_from CanCan::AccessDenied do |exception|
-    flash[:error] = "Sorry, but you do not have permission to view that page. It's top secret!"
+    flash[:error] = "Sorry, you may have to sign in to view that page."
     redirect_to root_url
   end
 

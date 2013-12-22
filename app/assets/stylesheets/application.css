@@ -29,7 +29,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, input[type="submit"] {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -87,6 +87,21 @@ a:link, a:visited {
 a:hover {
 	color: #164f6a;
 }
+
+.button { 
+	background-color: #164f6a; 
+	padding: 15px; 
+	font-family: Franchise; 
+	color: #ffffff; 
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	width: 20.5%;
+	margin-top: 0.3em;
+	font-size: 20px;
+}
+
+.button a:link, .button a:visited { color: #ffffff; display: block;}
+.button:hover { background-color: #ec632f; }
 
 .date { font-variant: small-caps; font-size: 22px; text-transform: uppercase; }
 
@@ -149,7 +164,7 @@ header { padding: 35px 0; min-height: 500px;}
 	display: block;
 }
 
-#flash_error {
+#flash_error, #flash_notice #flash_alert {
 	font-size: 20px;
 	padding: 10px 0;
 	color: #ec632f;
