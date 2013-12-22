@@ -1,5 +1,6 @@
 class WalksController < ApplicationController
   load_and_authorize_resource
+  
 	def new
 		@walk = Walk.new
 	end

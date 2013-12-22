@@ -5,7 +5,6 @@ gem 'rails', '4.0.2'
 gem 'devise'
 gem 'carrierwave'
 gem "rmagick", "~> 2.13.1"
-gem "cancan"
 gem 'activeadmin', github: 'gregbell/active_admin'
 
 # Use sqlite3 as the database for Active Record

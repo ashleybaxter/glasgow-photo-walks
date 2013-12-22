@@ -1,11 +1,11 @@
-<% if current_photographer.present? %>
 <div class="unit span-grid">
+
 <%= form_for @photo, :html => {:multipart => true} do |f| %>
-<%= f.hidden_field :photographer_id, :value => current_photographer.id %>
+<%= f.hidden_field :photographer_id, :value => current_photographer.id if current_photographer.present? %>
 <fieldset>
   <%= f.file_field :image %>
 </fieldset>
   <%= f.submit %>
 <% end %>
+
 </div>
-<% end %>
