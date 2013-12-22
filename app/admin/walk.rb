@@ -1,5 +1,9 @@
 ActiveAdmin.register Walk do
-
+  controller do
+    def permitted_params
+      params.permit walk: [:start_date, :start_time, :end_time, :longitude, :latitude, :address, :price]
+    end
+  end
   
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
