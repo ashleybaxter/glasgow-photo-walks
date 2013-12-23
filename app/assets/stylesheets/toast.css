@@ -157,6 +157,7 @@ html {
 	html {
 		font-size: 100%;
 	}
+	.book { width: 100%; text-align: center; }
 }
 
 @media (max-width: 810px) {
@@ -166,7 +167,7 @@ html {
 @media (max-width: 520px) {
 	.account-links { text-align: center;}
 	.google-maps, .recent-uploads, .bio { display: none; }
-	.book { margin-top: 0; width: 100%; }
+	.book { margin-top: 0; }
 	header { min-height: 300px; }
 	.about { display: none; }
 }
