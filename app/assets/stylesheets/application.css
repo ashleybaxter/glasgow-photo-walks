@@ -68,12 +68,12 @@ img {
 
 @font-face {
   font-family: Franchise;
-  src: url("/assets/fonts/Franchise.ttf");
+  src: url("Franchise.ttf");
 }
 
 @font-face {
   font-family: Inconsolata;
-  src: url("/assets/fonts/Inconsolata.otf");
+  src: url("Inconsolata.otf");
 }
 
 h1, h2, h3, h4, .book {
