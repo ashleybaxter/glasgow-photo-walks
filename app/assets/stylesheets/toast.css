@@ -157,12 +157,12 @@ html {
 	html {
 		font-size: 100%;
 	}
-	.book { width: 100%; text-align: center; }
 	.recent-uploads { display: none; }
 }
 
 @media (max-width: 810px) {
-	input { width: 50%;  }
+	input { width: 50%; }
+	.book { width: 100%; text-align: center; }
 }
 
 @media (max-width: 520px) {
