@@ -1,0 +1,432 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input[type="submit"] {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img {
+	max-width: 100%;
+}
+
+/* Ashley's Rockin' CSS */
+
+@font-face {
+  font-family: Franchise;
+  src: url("/assets/fonts/Franchise.ttf");
+}
+
+@font-face {
+  font-family: Inconsolata;
+  src: url("/assets/fonts/Inconsolata.otf");
+}
+
+h1, h2, h3, h4, .book {
+	font-family: Franchise;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	margin-bottom: 0.3em;
+}
+
+h2 { margin-bottom: 0 !important; }
+
+img.unit.one-of-three {
+	padding: 75px 25px;
+	background: rgb(255, 255, 255);
+	background: rgba(255, 255, 255, .7);
+}
+
+img.unit.one-of-three:hover {
+	background: rgb(255, 255, 255);
+	background: rgba(255, 255, 255, .8);
+}
+
+a:link, a:visited {
+	color: #ec632f;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #164f6a;
+}
+
+.button { 
+	background-color: #164f6a; 
+	padding: 10px; 
+	font-family: Franchise; 
+	color: #ffffff; 
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	width: 150px;
+	margin-top: 0.3em;
+	font-size: 20px;
+}
+
+.button a:link, .button a:visited { color: #ffffff; display: block;}
+.button:hover { background-color: #ec632f; }
+
+#flash_error, #flash_notice, #flash_alert, #flash_success {
+	font-size: 20px;
+	padding: 10px 0;
+	color: #ec632f;
+}
+
+fieldset { border: none; padding: 10px; text-align: left; }
+fieldset input {
+        border: 1px solid #dddddd;
+        -webkit-border-radius: 2px;
+           -moz-border-radius: 2px;
+                        border-radius: 2px;
+}
+label { text-align: right; display: inline-block; width: 20%; margin-right: 3%; }
+input { background-color: #f7f7f8; padding: 5px; width: 20%; }
+
+.date { font-variant: small-caps; font-size: 22px; text-transform: uppercase; }
+
+#map label { width: auto; display:inline; }
+#map img { max-width: none; }
+
+.outer-account-links { background: #2f2f2f;}
+.account-links { padding: 10px 0 15px 0; text-align: right; color: #ffffff; }
+.account-links a:link, .account-links a:visited { color: #ffffff; }
+.account-links a:hover { color: #ec632f; }
+
+header { padding: 35px 0; min-height: 500px;}
+.header-outer { 
+	background: url(glasgow.jpg)no-repeat center center fixed; 
+ 	-webkit-background-size: cover;
+ 		 -moz-background-size: cover;
+ 			 -o-background-size: cover;
+ 					background-size: cover;
+ 	padding-top: 15px;
+ 	margin-bottom: 15px;
+}
+
+.book {
+	padding: 15px 15px 10px 15px;
+	background-color: #ec632f;
+	margin: 15px 0 35px 0;
+	font-size: 40px;
+	width: 190px;
+	margin-top: -100px;
+}
+
+.book a:link, .book a:visited {
+	color: white;
+	display: block;
+}
+
+.book:hover {
+	background-color: #164f6a;
+	display: block;
+}
+
+.photographer-name {
+	padding: 3px;
+	bottom: 5px;
+	background: rgb(255, 255, 255);
+	background: rgba(255, 255, 255, .7);
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+.google-maps {
+  position: relative;
+  padding-bottom: 375px; // This is the aspect ratio
+  height: 0;
+  overflow: hidden;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 70% !important;
+}
+
+.sidebar p, .sidebar ul {
+	margin-bottom: 45px;
+}
+
+.form-button {
+	background-color: #164f6a; 
+	padding: 10px !important; 
+	font-family: Franchise; 
+	color: #ffffff; 
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	width: 150px;
+	margin-top: 0.3em;
+	font-size: 20px;
+	margin-top: 1.5rem !important;
+}
+
+.form-button:hover {
+	background-color: #ec632f;
+}
+
+.photo-grid li {
+	display: inline;
+}
+
+.photo-grid a:link, .photo-grid a:visited {
+	width: 150px;
+}
+
+img {
+	position:relative;
+}
+
+.avatar {
+	webkit-border-radius: 125px;
+	border-radius: 125px;
+	-moz-border-radius: 125px;
+	position: absolute;
+	z-index: 1;
+}
+
+.profile {
+	margin-left:  140px;
+}
+
+footer {
+	margin-top: 35px;
+}
+/*-----------------------------------*\
+
+	Toast
+	A Simple CSS Framework
+	=================================
+
+	Values you may want to change:
+	- .container { max-width:; }
+	- p { margin-bottom:; }
+	- html { font:; }
+
+	Remember: no framework will be as
+	good as a custom built, per-
+	project	one. Toast and other
+	frameworks are best used for
+	rapid prototyping.
+
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+	$RESET
+\*-----------------------------------*/
+
+
+* {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+/*-----------------------------------*\
+	$GRID
+\*-----------------------------------*/
+
+.container {
+	/* Whatever you want. They’re your oats. */
+	max-width: 1240px;
+	margin: 0 auto;
+	padding: 0 30px;
+	padding: 0 1.5rem;
+}
+
+.grid {
+	margin-left: -3%;
+	max-width: 105%;
+}
+
+.unit {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	vertical-align: top;
+	margin-left: 3%;
+	margin-right: -.25em;
+	/* Clearfix */
+	overflow: hidden;
+	*overflow: visible;
+}
+
+	.unit.demo {
+		background-color: #fff8eb;
+		height: 48px;
+		height: 3rem;
+		margin-bottom: 24px;
+		margin-bottom: 1.5rem;
+	}
+
+.span-grid {
+	width: 97%;
+}
+
+.one-of-two { width: 47%; }
+
+.one-of-three { width: 30.36%; }
+.two-of-three { width: 63.666666666%; }
+
+.one-of-four { width: 22.05%; }
+.three-of-four { width: 72%; }
+
+.one-of-five { width: 17.07%; }
+.two-of-five { width: 37%; }
+.three-of-five { width: 57%; }
+.four-of-five { width: 77%; }
+
+@media screen and (max-width: 750px) {
+	.grid {
+		margin-left: 0;
+		max-width: none;
+	}
+
+	.unit {
+		width: auto;
+		margin-left: 0;
+		display: block;
+	}
+}
+
+/*-----------------------------------*\
+	$TYPE
+
+	Works off the assumption of a 1.5
+	line height @ 20px. Again, change
+	as necessary.
+\*-----------------------------------*/
+
+p, .p, ul, ol, hr, table, form, pre,
+h1, .alpha, h2, .beta {
+	margin-bottom: 30px;
+	margin-bottom: 1.5rem;
+	line-height: 1.3em;
+}
+
+h1, .alpha {
+	font-size: 60px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+h2, .beta {
+	font-size: 40px;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+h3, .gamma {
+	font-size: 25px;
+	font-weight: 700;
+}
+
+hr {
+	border: none;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	margin-top: -1px;
+}
+
+/*-----------------------------------*\
+	$MAIN
+\*-----------------------------------*/
+
+html {
+	font: 125%/1.5;
+	font-family: Inconsolata;
+	letter-spacing: -0.05em;
+	color: #2F2F2F;
+}
+
+@media (max-width: 1250px) {
+	label { display: block; width: 100%; text-align: left; }
+	input { width: 40%; }
+	.avatar { display: none; }
+	.profile { margin-left: 0; }
+}
+
+@media screen and (max-width: 650px) {
+	html {
+		font-size: 100%;
+	}
+}
+
+@media (max-width: 810px) {
+	input { width: 50%;  }
+}
+
+@media (max-width: 520px) {
+	.account-links { text-align: center;}
+	.google-maps, .recent-uploads, .bio { display: none; }
+	.book { margin-top: 0; }
+	header { min-height: 300px; }
+	.about { display: none; }
+}
+
+@media (max-width: 420px) {
+	.account-links { text-align: center; }
+	input { width: 75%; }
+	footer { margin-top: 0; }
+	header { min-height: 230px; }
+}
