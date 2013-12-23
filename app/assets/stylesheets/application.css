@@ -151,7 +151,7 @@ header { padding: 35px 0; min-height: 500px;}
 	margin: 15px 0 35px 0;
 	font-size: 40px;
 	width: 190px;
-	
+	margin-top: -100px;
 }
 
 .book a:link, .book a:visited {
@@ -164,7 +164,7 @@ header { padding: 35px 0; min-height: 500px;}
 	display: block;
 }
 
-#flash_error, #flash_notice, #flash_alert {
+#flash_error, #flash_notice, #flash_alert, #flash_success {
 	font-size: 20px;
 	padding: 10px 0;
 	color: #ec632f;
@@ -179,6 +179,21 @@ header { padding: 35px 0; min-height: 500px;}
 	left: 0;
 	bottom: 0;
 }
+
+.google-maps {
+       position: relative;
+       padding-bottom: 375px; // This is the aspect ratio
+       height: 0;
+       overflow: hidden;
+   }
+   #map {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100% !important;
+       height: 70% !important;
+   }
+
 
 fieldset { border: none; padding: 10px; text-align: left; }
 fieldset input {
