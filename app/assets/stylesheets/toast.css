@@ -152,6 +152,7 @@ html {
 	.avatar { display: none; }
 	.profile { width: 100%; }
 	.book { width: 100%; text-align: center; }
+	.button { width: 155px; }
 }
 
 @media screen and (max-width: 650px) {
