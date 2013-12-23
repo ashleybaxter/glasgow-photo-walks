@@ -240,10 +240,11 @@ img {
 	-moz-border-radius: 125px;
 	position: absolute;
 	z-index: 1;
+	right: 0;
 }
 
 .profile {
-	margin-left:  140px;
+ width: 65%;
 }
 
 footer {

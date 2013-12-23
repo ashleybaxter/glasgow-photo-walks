@@ -150,7 +150,7 @@ html {
 	label { display: block; width: 100%; text-align: left; }
 	input { width: 40%; }
 	.avatar { display: none; }
-	.profile { margin-left: 0; }
+	.profile { width: 100%; }
 }
 
 @media screen and (max-width: 650px) {
