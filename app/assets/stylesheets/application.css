@@ -66,17 +66,34 @@ img {
 
 /* Ashley's Rockin' CSS */
 
+@font-face {
+  font-family: Franchise;
+  src: url("/assets/fonts/Franchise.ttf");
+}
+
+@font-face {
+  font-family: Inconsolata;
+  src: url("/assets/fonts/Inconsolata.otf");
+}
+
+h1, h2, h3, h4, .book {
+	font-family: Franchise;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	margin-bottom: 0.3em;
+}
+
+h2 { margin-bottom: 0 !important; }
+
 img.unit.one-of-three {
 	padding: 75px 25px;
-	background: rgb(255, 255, 255); /* Fall-back for browsers that don't
-	                                    support rgba */
-	    background: rgba(255, 255, 255, .7);
+	background: rgb(255, 255, 255);
+	background: rgba(255, 255, 255, .7);
 }
 
 img.unit.one-of-three:hover {
-	background: rgb(255, 255, 255); /* Fall-back for browsers that don't
-	                                    support rgba */
-	    background: rgba(255, 255, 255, .8);
+	background: rgb(255, 255, 255);
+	background: rgba(255, 255, 255, .8);
 }
 
 a:link, a:visited {
@@ -103,47 +120,42 @@ a:hover {
 .button a:link, .button a:visited { color: #ffffff; display: block;}
 .button:hover { background-color: #ec632f; }
 
+#flash_error, #flash_notice, #flash_alert, #flash_success {
+	font-size: 20px;
+	padding: 10px 0;
+	color: #ec632f;
+}
+
+fieldset { border: none; padding: 10px; text-align: left; }
+fieldset input {
+        border: 1px solid #dddddd;
+        -webkit-border-radius: 2px;
+           -moz-border-radius: 2px;
+                        border-radius: 2px;
+}
+label { text-align: right; display: inline-block; width: 20%; margin-right: 3%; }
+input { background-color: #f7f7f8; padding: 5px; width: 20%; }
+
 .date { font-variant: small-caps; font-size: 22px; text-transform: uppercase; }
 
 #map label { width: auto; display:inline; }
 #map img { max-width: none; }
 
-@font-face {
-  font-family: Franchise;
-  src: url("/assets/fonts/Franchise.ttf");
-}
-
-@font-face {
-  font-family: Inconsolata;
-  src: url("/assets/fonts/Inconsolata.otf");
-}
-
-h1, h2, h3, h4, .book {
-	font-family: Franchise;
-	text-transform: uppercase;
-	letter-spacing: 0.05em;
-	margin-bottom: 0.3em;
-}
-
-.header-outer {
-	margin-bottom: 15px;
-}
-
-h2 {
-	margin-bottom: 0 !important;
-}
 .outer-account-links { background: #2f2f2f;}
 .account-links { padding: 10px 0 15px 0; text-align: right; color: #ffffff; }
 .account-links a:link, .account-links a:visited { color: #ffffff; }
 .account-links a:hover { color: #ec632f; }
 
 header { padding: 35px 0; min-height: 500px;}
-.header-outer { background: url(glasgow.jpg)no-repeat center center fixed; 
- -webkit-background-size: cover;
- -moz-background-size: cover;
- -o-background-size: cover;
- background-size: cover;
- padding-top: 15px; }
+.header-outer { 
+	background: url(glasgow.jpg)no-repeat center center fixed; 
+ 	-webkit-background-size: cover;
+ 		 -moz-background-size: cover;
+ 			 -o-background-size: cover;
+ 					background-size: cover;
+ 	padding-top: 15px;
+ 	margin-bottom: 15px;
+}
 
 .book {
 	padding: 15px 15px 10px 15px;
@@ -164,12 +176,6 @@ header { padding: 35px 0; min-height: 500px;}
 	display: block;
 }
 
-#flash_error, #flash_notice, #flash_alert, #flash_success {
-	font-size: 20px;
-	padding: 10px 0;
-	color: #ec632f;
-}
-
 .photographer-name {
 	padding: 3px;
 	bottom: 5px;
@@ -181,30 +187,19 @@ header { padding: 35px 0; min-height: 500px;}
 }
 
 .google-maps {
-       position: relative;
-       padding-bottom: 375px; // This is the aspect ratio
-       height: 0;
-       overflow: hidden;
-   }
-   #map {
-       position: absolute;
-       top: 0;
-       left: 0;
-       width: 100% !important;
-       height: 70% !important;
-   }
-
-
-fieldset { border: none; padding: 10px; text-align: left; }
-fieldset input {
-        border: 1px solid #dddddd;
-        -webkit-border-radius: 2px;
-           -moz-border-radius: 2px;
-                        border-radius: 2px;
+  position: relative;
+  padding-bottom: 375px; // This is the aspect ratio
+  height: 0;
+  overflow: hidden;
 }
-label { text-align: right; display: inline-block; width: 20%; margin-right: 3%; }
-input { background-color: #f7f7f8; padding: 5px; width: 20%; }
-/* Sidebar */
+
+#map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 70% !important;
+}
 
 .sidebar p, .sidebar ul {
 	margin-bottom: 45px;
@@ -231,12 +226,12 @@ input { background-color: #f7f7f8; padding: 5px; width: 20%; }
 	display: inline;
 }
 
-img {
-	position:relative;
-}
-
 .photo-grid a:link, .photo-grid a:visited {
 	width: 150px;
+}
+
+img {
+	position:relative;
 }
 
 .avatar {
