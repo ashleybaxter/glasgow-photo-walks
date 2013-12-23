@@ -166,7 +166,7 @@ html {
 @media (max-width: 520px) {
 	.account-links { text-align: center;}
 	.google-maps, .recent-uploads, .bio { display: none; }
-	.book { margin-top: 0; }
+	.book { margin-top: 0; width: 100%; }
 	header { min-height: 300px; }
 	.about { display: none; }
 }
