@@ -39,6 +39,21 @@ class ImageUploader < CarrierWave::Uploader::Base
   version :thumb do
     process :resize_to_limit => [150, 150]
   end
+  
+  # Mobile version
+  version :mobile do
+    process :resize_to_fit => [300, 300]
+  end
+
+  # Tablet version
+  version :tablet do
+    process :resize_to_fit => [600, 600]
+  end
+
+  # Desktop version
+  version :desktop do
+    process :resize_to_fit => [900, 900]
+  end
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:

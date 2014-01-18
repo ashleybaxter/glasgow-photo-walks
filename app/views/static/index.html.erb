@@ -23,16 +23,13 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
 
 <div class="recent-uploads">
 <h2>Recent Uploads</h2>
-<p>Glasgow Photo Walk values its community and encourages participants of the photo walks to upload and share their photos. <%= link_to 'Sign up', new_photographer_registration_path %> and <%= link_to 'begin sharing', new_photo_path %>.</p>
-<% if @photo.present? %>
-  <% @photo.sort_by{|t| - t.created_at.to_i}.first(5).each do |p| %>
-  <%=  link_to p.image_url do %>
-    <%= image_tag(p.image_url(:thumb).to_s) %>
-  <% end %>
-  <% end %>
-<% end %>
+<p>Glasgow Photo Walk values its community and encourages participants of the photo walks to share their photos. You can do so on the <%= link_to 'Flickr group', "http://www.flickr.com/groups/2529401@N22/" %> or <%= link_to 'Facebook page', "https://www.facebook.com/glasgowphotowalk" %>.</p>
 
-<p class="button"><%= link_to 'Upload your photo', new_photo_path %></p>
+<div id="Flickfeed">
+
+</div>
+
+<p class="button"><%= link_to 'View Flickr group', "http://www.flickr.com/groups/2529401@N22/" %></p>
 </div>
 </div>
 

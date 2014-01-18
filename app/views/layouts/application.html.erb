@@ -11,14 +11,7 @@
 	<div class="container">
 		<div class="grid">
 	<div class="unit span-grid account-links">
-	<% if photographer_signed_in? %>
-	  Logged in as <strong><%= current_photographer.first_name %></strong> &#124;
-	    <%= link_to 'Edit profile', edit_photographer_registration_path %> &#124;
-	    <%= link_to "Sign out", destroy_photographer_session_path, method: :delete %>
-	  <% else %>
-	    <%= link_to "Sign up", new_photographer_registration_path %> &#124;
-	    <%= link_to "Sign in", new_photographer_session_path %>
-	<% end %>
+	  <%= link_to 'Facebook', "https://www.facebook.com/glasgowphotowalk" %> &#124; <%= link_to 'Flickr', "http://www.flickr.com/groups/2529401@N22/" %>
 	</div>
 	</div>
 	</div>
@@ -50,5 +43,15 @@
 
   </div>
  </div>
+<script type="text/javascript" src="flickfeed.js"></script>
+<script type="text/javascript">
+	Flickfeed({
+		group_id: "2529401@N22",
+		limit: 10,
+		target: "#Flickfeed",
+		size: 'q', // 150 square
+		sort: 'date-posted-desc'
+	});
+</script>
 </body>
 </html>
