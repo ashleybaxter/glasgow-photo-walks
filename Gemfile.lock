@@ -186,7 +186,11 @@ DEPENDENCIES
   pg
   rails (= 4.0.2)
   responsive_images
+<<<<<<< HEAD
+  rmagick (~> 2.13.1)
+=======
   rmagick (~> 2.13.2)
+>>>>>>> 4556f923f8741afaeb19b79da72c4c90c3faf062
   sass-rails (~> 4.0.0)
   sdoc
   sqlite3
