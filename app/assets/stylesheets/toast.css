@@ -146,40 +146,37 @@ html {
 	color: #2F2F2F;
 }
 
+@media (max-width: 1250px) {
+	label { display: block; width: 100%; text-align: left; }
+	input { width: 40%; }
+	.avatar { display: none; }
+	.profile { width: 100%; }
+	.book { width: 100%; text-align: center; }
+	.button { width: 155px; }
+}
+
 @media screen and (max-width: 650px) {
 	html {
 		font-size: 100%;
 	}
-}
-@media (max-width: 1250px) {
-		label { display: block; width: 100%; text-align: left;}
-	input { width: 40%;  }
-	.avatar {
-		display: none;
-	}
-	.profile {
-		margin-left: 0;
-	}
-
+	.recent-uploads { display: none; }
 }
 
 @media (max-width: 810px) {
-
-	input { width: 50%;  }
+	input { width: 50%; }
 }
+
 @media (max-width: 520px) {
 	.account-links { text-align: center;}
-	.google-maps, .recent-uploads, .bio {
-		display: none;
-	}
-	.book {
-		margin-top: 0;
-	}
-	header {
-		min-height: 300px;
-	}
+	.google-maps, .bio { display: none; }
+	.book { margin-top: 0; }
+	header { min-height: 300px; }
+	.about { display: none; }
 }
+
 @media (max-width: 420px) {
-	.account-links { text-align: center;}
-	input { width: 75%;  }
+	.account-links { text-align: center; }
+	input { width: 75%; }
+	footer { margin-top: 0; }
+	header { min-height: 230px; }
 }

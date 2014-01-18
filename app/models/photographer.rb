@@ -5,4 +5,6 @@ class Photographer < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
          
   has_many :photos
+
+  validates :first_name, :last_name, presence: true
 end
