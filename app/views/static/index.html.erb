@@ -16,7 +16,7 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
 });
 </script>
 </div>
-  <p class="book"><a href="https://getinvited.to/ashleybaxter/glasgow-photo-walk-05/">Book a spot</a></p>
+  <p class="book"><a href="https://getinvited.to/ashleybaxter/glasgow-photo-walk-workshop-with-dan-rubin/">Book a spot</a></p>
 
   <div class="recent-uploads">
     <h2>Recent Uploads</h2>
@@ -43,7 +43,7 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
 	 <li>Location: 	<%= Walk.last.address %></li>
 	 <li>Time: 		<%= Walk.last.start_time.strftime("%k:%M %p") %></li>
 	 <li>Length: 	<%= Walk.last.duration %> hour(s)</li>
-	 <li>Guide: 		<a href="http://twitter.com/iamashley">Ashley Baxter</a></li>
+	 <li>Guide: 		<a href="http://instagram.com/danrubin">Dan Rubin/a></li>
 	 <li>Price: 		<%= number_to_currency(Walk.last.price, :unit => "£") %></li>
     </ul>
 <% end %>
