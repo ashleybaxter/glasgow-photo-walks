@@ -43,10 +43,15 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
 	 <li>Location: 	<%= Walk.last.address %></li>
 	 <li>Time: 		<%= Walk.last.start_time.strftime("%k:%M %p") %></li>
 	 <li>Length: 	<%= Walk.last.duration %> hour(s)</li>
-	 <li>Guide: 		<a href="http://instagram.com/danrubin">Dan Rubin/a></li>
+	 <li>Guide: 		<a href="http://instagram.com/danrubin">Dan Rubin</a></li>
 	 <li>Price: 		<%= number_to_currency(Walk.last.price, :unit => "£") %></li>
     </ul>
 <% end %>
+
+  <div class="bio">
+    <h3>Lightroom And Smartphone Post-Production Workshop</h3>
+        <p>In the world of digital photography, the images you capture with your SLR, mirrorless, or smartphone camera are just the beginning: They only truly come alive through post-production.<a href="https://getinvited.to/ashleybaxter/glasgow-photo-walk-workshop-with-dan-rubin/">More details…</a></p>
+  </div>
 
   <div class="bio">
     <h3>Tour Guide Bio</h3>
